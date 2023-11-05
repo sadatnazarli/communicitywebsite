@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feelings and Stories</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <div class="header-content">
+            <h1 class="display-4">Feelings and Stories</h1>
+            <button id="login-button" class="btn btn-primary">Login</button>
+        </div>
+    </header>
+    
+    <header class="bg-dark text-white text-center py-4">
+    </header>
+
+    <div class="container mt-4 text-center">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#write-story-section">Write Story</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#write-feelings-section">Write Feelings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#view-stories-section">View Other People's Minds</a>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+            <div class="tab-pane show active" id="write-story-section">
+                <h2>Share Your Story</h2>
+                <form id="story-form" class="form">
+                    <div class="form-group">
+                        <label for="story-name">Your Name:</label>
+                        <input type="text" id="story-name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="story-comment">Your Story:</label>
+                        <textarea id="story-comment" name="comment" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Story</button>
+                </form>
+            </div>
+            <div class="tab-pane" id="write-feelings-section">
+                <h2>Share Your Feelings</h2>
+                <form id="feelings-form" class="form">
+                    <div class="form-group">
+                        <label for="feelings-name">Your Name:</label>
+                        <input type="text" id="feelings-name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feelings-comment">Your Feelings:</label>
+                        <textarea id="feelings-comment" name "comment" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feelings</button>
+                </form>
+            </div>
+            <div class="tab-pane" id="view-stories-section">
+                <h2>Feelings and Stories Shared by Others</h2>
+                <div id="comments" class="bg-light p-3">
+                    <!-- Comments from users will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-2 mt-4">
+        <p>&copy; 2023 Feelings and Stories</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
